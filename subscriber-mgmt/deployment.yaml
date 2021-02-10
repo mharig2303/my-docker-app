@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: subscriber-mgmt-api
+  name: subscriber-mgmt-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: subscriber-mgmt-api
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: subscriber-mgmt-api
+    spec:
+      containers:
+      - image: subscriber-mgmt-api:1.0
+        name: my-repo
+        resources: {}
+        imagePullPolicy: Never
+status: {}
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: subscriber-mgmt-api
+  name: subscriber-mgmt-api
+spec:
+  ports:
+  - port: 8090
+    protocol: TCP
+    targetPort: 8090
+  selector:
+    app: subscriber-mgmt-api
+  type: NodePort
+status:
+  loadBalancer: {}

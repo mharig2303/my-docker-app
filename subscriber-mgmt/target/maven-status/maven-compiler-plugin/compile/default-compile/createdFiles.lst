@@ -1,0 +1,11 @@
+com\subs\management\controller\SubscriberController.class
+com\subs\management\entity\Subscriber.class
+com\subs\management\repository\SubscriberAddressRepository.class
+com\subs\management\service\SubscriberServiceImpl.class
+com\subs\management\dto\SubscriberResponse.class
+com\subs\management\service\SubscriberService.class
+com\subs\management\entity\SubscriberAddress.class
+com\subs\management\SubscriberMgmtApplication.class
+com\subs\management\repository\SubscriberRepository.class
+com\subs\management\dto\SubscriberRequest.class
+com\subs\management\dto\SubscribersListResponse.class
